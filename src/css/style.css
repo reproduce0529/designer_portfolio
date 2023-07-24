@@ -1,0 +1,367 @@
+    /*메인 폰트*/
+    @font-face {
+        font-family: 'NanumBarunGothic';
+        font-style: normal;
+        font-weight: 400;
+        src: url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.eot');
+        src: url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.eot?#iefix') format('embedded-opentype'), url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.woff') format('woff'), url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.ttf') format('truetype');
+    }
+
+    @font-face {
+        font-family: 'NanumBarunGothic';
+        font-style: normal;
+        font-weight: 700;
+        src: url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.eot');
+        src: url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.eot?#iefix') format('embedded-opentype'), url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.woff') format('woff'), url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.ttf') format('truetype')
+    }
+
+    @font-face {
+        font-family: 'NanumBarunGothic';
+        font-style: normal;
+        font-weight: 300;
+        src: url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.eot');
+        src: url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.eot?#iefix') format('embedded-opentype'), url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.woff') format('woff'), url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.ttf') format('truetype');
+    }
+
+    .nanumbarungothic * {
+        font-family: 'NanumBarunGothic', sans-serif;
+    }
+    /*서브 폰트*/
+    @font-face {
+        font-family: 'GmarketSansMedium';
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+    }
+
+    * {
+        margin: 0px;
+        padding: 0px;
+        font-family: NanumBarunGothic;
+        --color-black : #000;
+        --color-white : #fff;
+        --color-background-color : #212121;
+        --color-point : #00FFE4;
+        transition: all .4s ease-in-out;
+    }
+    a {text-decoration: none;color: var(--color-black);}
+    body {background-color: var(--color-background-color);}
+    body::-webkit-scrollbar{display: none;}
+    .wrap {width: 100%;}
+    .inner {width: 1150px;margin: auto;scroll-behavior: smooth}
+    #About{position: relative;}
+    .hidden{width: 0px;height: 0px;border: none;outline: none; position: absolute; top: 0px; left: 0px;}
+
+    .header{
+        width: 100%;
+        display: flex;
+        color: var(--color-white);
+        padding-top: 20px;
+        align-items: center;
+        justify-content: space-between  ;
+    }
+    .header-menubox-item{
+        color: var(--color-white);
+        height: 47px;
+        line-height: 47px;
+        padding-left: 15px;
+        padding-right:15px;
+    }
+    .header-logo-img{
+        width: 164px;
+        height: 47px;
+        object-fit: contain;
+    }
+
+    .right-textBox{
+        width: 340px;
+        position: fixed;
+        bottom: 0px;
+        right: 20px;
+        z-index: 9999;
+    }
+
+    .right-textBox-title{
+        display: block;
+        height: 30px;
+        font-family: 'GmarketSansMedium';
+        text-align: center;
+        background-color: white;
+        border-top-left-radius: 20px;
+        font-size: 32px;
+        border-top-right-radius: 20px;
+        box-shadow: 0px 4px 20px rgba(136,136,136,.3);
+        border-bottom: 1px solid rgba(136,136,136,.3);
+    }
+    .right-textBox-title > svg{
+        
+        transform: rotate(180deg);
+    }
+    .right-textBox-body-inner{
+        width: 90%;
+        margin: auto;
+        padding-top: 12px;
+        word-break: keep-all;
+        letter-spacing: -0.5px;
+        padding-bottom: 24px;
+    }
+    .right-textBox-body-inner > b{
+        padding-top: 6px;
+        padding-bottom: 6px;
+        line-height: 2;
+        font-weight: 800;
+    }
+    #chb-Showbody:checked ~ .right-textBox-body{
+        height: 400px;
+        background-color: white;
+        overflow-y: scroll;
+        color: #333;
+    }
+    #chb-Showbody:checked ~ .right-textBox-body::-webkit-scrollbar{
+        display: none;
+    }
+    #chb-Showbody:checked ~ .right-textBox-title > svg{
+        transform: rotate(0deg);
+    }
+    .right-textBox-body{
+        height: 0px;
+        overflow: hidden;
+    }
+
+    .portfolio-link{
+        color: var(--color-point);
+        text-decoration: underline;
+        text-decoration-thickness: 1px;
+        display: block;
+        margin-top: 12px;
+        
+    }
+
+    .portfolio-link:nth-child(3){
+        margin-top: 60px;
+    }
+
+
+    .typography{
+        font-size: 35px;
+        margin-top: 100px;
+        margin-bottom: 100px;
+        color: var(--color-white);
+        font-weight: 300;
+        line-height: 1.6;
+    }
+    .portfolio-menu{
+        display: flex;
+    }
+    .portfolio-menu-item{
+        color: var(--color-white);
+        padding: 10px 14px 14px 10px;
+        transition: all .4s ease;
+    }
+    .portfolio-menu-item:hover{
+        color: var(--color-point);
+    }
+    .portfolio-menu-first{
+        padding-left: 0px;
+        color: var(--color-point);
+    }
+
+
+    
+    .portfoilo-list{
+        width: 100%;
+        margin: auto;
+    }
+    .portfolio-item{
+        
+        width: 360px;
+        height: 500px;
+        position: relative;
+        display: inline-block;
+    }
+    .portfolio-item-img{
+        display: block;
+        width: 360px;
+        height: 500px;
+        object-fit: contain;
+    }
+    .portfolio-line{
+        margin-top: 24px;
+        display: flex;
+        justify-content: space-between;
+    }
+    .portfolio-item-overviewBox{
+        font-family: 'GmarketSansMedium';
+        position: absolute;
+        width: 360px;
+        height: 500px;
+        top: 0px;
+        left: 0px;
+        font-size: 20px;
+        font-weight: bold;
+        text-align: center;
+        line-height: 500px;
+        background-color: var(--color-black);
+        color: var(--color-white);
+        opacity: 0;
+        cursor: pointer;
+        transition: all .4s ease;
+    }
+    .portfolio-item-overviewBox:hover{
+        opacity: 0.9;
+    }
+
+    
+
+    .About-menu{
+        margin-top: 100px;
+        margin-bottom: 24px;
+        display: flex;
+    }
+    
+    .About-menu-item{
+        color: var(--color-white);
+        padding: 10px 14px 14px 10px;
+        transition: all .4s ease;
+    }
+
+    .About-menu-first{
+        padding-left: 0px;
+        color: var(--color-point);
+    }
+    .About-profile-box{
+        width: calc(100% - 140px);
+        margin: auto;
+        display: flex;
+        justify-content: space-around;
+        padding-top: 32px;
+    }
+    .About-profile-img{
+        width: 350px;
+        height: 350px;
+        border-radius: 300px;
+    }
+    .About-profile-text{width:440px
+    }
+    .About-profile-text-top{
+        margin-top: 16px;
+        margin-bottom: 18px;
+    }
+    .About-profile-text-title{
+        font-size: 35px;
+        color: var(--color-point);
+    }
+    .About-profile-text-title>strong{
+        font-weight: bold;
+    }
+    .About-profile-text-normal{
+        margin-top: 12px;
+        font-size: 16px;
+        color: white;
+        line-height: 24px;
+    }
+
+    .About-profile-text-bottom{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px;
+    }
+    .About-profile-text-bottom-item{
+        width: 100px;
+        height: 120px;
+        background-color: white;
+        color: black;
+        text-align: center;
+        color: white;
+        font-size: 12px;
+    }
+    .About-profile-text-bottom-item>img{
+        margin-bottom: 12px;
+    }
+
+    #footer{
+        font-size: 14px;
+        text-align: center;
+        height: 100px;
+        line-height: 100px;
+        padding-bottom: 120px;
+        color: #888;
+    }
+
+
+    .portfolio-sub-imgbox{
+        margin-top: 42px;
+        position: relative;
+    }
+    .portfolio-sub-imgbox>img{
+        width: 100%;
+    }
+
+
+
+    /*반응형이다티비*/
+    
+
+    @media (max-width : 1200px) {
+        .inner {
+            width: calc(100% - 64px);
+        }
+        .typography{
+            text-align: center;
+        }
+        .portfolio-menu{
+            padding-left: 32px;
+        }
+        .portfolio-line{
+            
+            display: block;
+            margin: auto;
+            margin-top: 0px;
+            
+        }
+        .portfolio-line > a{
+            margin: auto;
+            margin-top: 32px;
+            display: block;
+
+        }
+        .portfolio-menu{
+            justify-content: center;
+            padding-left: 0px;
+        }
+        .About-menu{
+            justify-content: center;
+        }
+        .About-profile-box{
+            display: block;
+        }
+        .About-profile-text-title{
+            text-align: center;
+        }
+        .About-profile-imgbox{
+            text-align: center;
+        }
+        .About-profile-text{
+            margin: auto;
+        }
+        .About-profile-text-bottom-item{
+            width: 80px;
+            height: 100px;
+        }
+        .About-profile-text{
+            width: 350px;
+        }
+        .About-profile-box{
+            width: 100%;
+        }
+
+    }
+
+    @media (max-width : 480px){
+        .inner{
+            width: calc(100% - 48px);
+
+        }
+       
+        
+    }
